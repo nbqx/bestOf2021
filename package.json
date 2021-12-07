@@ -1,0 +1,16 @@
+{
+  "name": "@nbqx/best-of-2021",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "html": "vfm ./src/index.md > ./src/index.html",
+    "dev": "yarn html && vivliostyle preview -d ./src/index.html --user-style ./src/style.css",
+    "build": "yarn html && vivliostyle build -d ./src/index.html --user-style ./src/style.css -o bestOf2021.pdf"
+  },
+  "dependencies": {
+    "@vivliostyle/cli": "^4.5.0",
+    "@vivliostyle/vfm": "^1.0.2"
+  }
+}

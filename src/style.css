@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: "KyokaICAPro-Regular";
+	font-weight: 600;
+	src: url("fonts/A-OTF-KyokaICAPro-Medium.otf") format("opentype");
+}
+
+
+@font-face {
+	font-family: "FOT-筑紫明朝 Pr5N";
+	font-weight: 400;
+	src: url("fonts/FOT-TsukuMinPr5N-L.otf") format("opentype");
+}
+
+@page {
+	/* こだわりの四六判 */
+	size: 127mm 188mm;
+
+	/* トンボと塗り足し */
+	/* marks: crop cross;
+	bleed: 3mm; */
+}
+
+@page :left {
+	@bottom-left-corner {
+		content: counter(page);
+		writing-mode: horizontal-tb;
+		font-size: 8pt;
+		font-style: italic;
+		line-height: 20pt;
+		vertical-align: top;
+		margin-top: 20pt;
+		padding-right: 0.25em;
+	}
+}
+
+@page :right {
+	@bottom-right-corner {
+		content: counter(page);
+		writing-mode: horizontal-tb;
+		font-size: 8pt;
+		font-style: italic;
+		line-height: 20pt;
+		vertical-align: top;
+		margin-top: 20pt;
+		padding-left: 0.25em;
+	}
+}
+
+html {
+	writing-mode: vertical-rl;
+	font-family: "FOT-筑紫明朝 Pr5N";
+	font-weight: 400;
+	font-size: 9.5pt;
+	line-height: 17.5pt;
+	letter-spacing: 0;
+
+	orphans: 1;
+	widows: 1;
+}
+
+h2 {
+	font-size: 14pt;
+	font-family: "KyokaICAPro-Regular";
+	font-weight: 600;
+
+	line-height: 19pt;
+	width: 1.9em;
+}
+
+p {
+	margin: 0;
+	text-indent: 1em;
+  text-align: justify;
+}
+
+a {
+	color: #000;
+}
+
+/* 縦中横 */
+.tcy {
+  text-combine-upright: all;
+}
+
+div.page-break {
+	page-break-before: always;
+}
+
+section.footnotes {
+	page-break-before: always;
+}
+
+section.footnotes a {
+	text-decoration: none;
+}
